@@ -3,3 +3,9 @@ jointlimits.data
 jointlimits.js
 jointlimits.html
 jointlimits.wasm
+
+*.vcxproj*
+*.sln
+.vs
+bin-int
+bin/*-windows-*
