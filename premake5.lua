@@ -37,6 +37,9 @@ project "JointLimits"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "jlpch.h"
+	pchsource "src/jlpch.cpp"
+
 	defines{ "_CRT_SECURE_NO_WARNINGS" }
 	linkoptions { "-IGNORE:4099" }
 

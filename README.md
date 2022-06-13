@@ -6,7 +6,7 @@ It uses [raylib](https://www.raylib.com/) or more specifically [raygui](https://
 
 ## Notes
 
-I fork this repo to add thoes features:
+I fork this repo to add those features:
 
 - Supports Windows(use premake5 build tool and vs2022)
 - More C++ styles(in progress...)

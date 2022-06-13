@@ -1,16 +1,5 @@
-extern "C"
-{
-#include "raylib.h"
-#include "raymath.h"
-#define RAYGUI_IMPLEMENTATION
-#include "raygui.h"
-}
+#include "jlpch.h"
 
-#if defined(PLATFORM_WEB)
-#include <emscripten/emscripten.h>
-#endif
-
-#include "common.h"
 #include "vec.h"
 #include "mat.h"
 #include "quat.h"
@@ -18,11 +7,6 @@ extern "C"
 #include "array.h"
 #include "character.h"
 #include "database.h"
-
-#include <initializer_list>
-#include <vector>
-#include <functional>
-
 //--------------------------------------
 
 static inline Vector3 to_Vector3(vec3 v)
