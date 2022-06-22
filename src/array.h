@@ -5,6 +5,14 @@
 #include <stdio.h>
 #include <malloc.h>
 
+#ifndef RESTRICT
+#ifdef _WIN32
+#define RESTRICT __restrict
+#else
+#define RESTRICT __restrict__
+#endif // _WIN32
+#endif
+
 //--------------------------------------
 
 // Basic type representing a pointer to some
@@ -17,7 +25,7 @@ template<typename T>
 struct slice1d
 {
 	int size;
-	T* __restrict data;
+	T* RESTRICT data;
 	
 	slice1d(int _size, T* _data) : size(_size), data(_data) {}
 	
@@ -32,7 +40,7 @@ template<typename T>
 struct slice2d
 {
 	int rows, cols;
-	T* __restrict data;
+	T* RESTRICT data;
 	
 	slice2d(int _rows, int _cols, T* _data) : rows(_rows), cols(_cols), data(_data) {}
 
